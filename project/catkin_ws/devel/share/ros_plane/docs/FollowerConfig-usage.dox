@@ -1,0 +1,9 @@
+\subsubsection usage Usage
+\verbatim
+<node name="ros_plane" pkg="ros_plane" type="ros_plane">
+  <param name="CHI_INFTY" type="double" value="1.0472" />
+  <param name="K_PATH" type="double" value="0.025" />
+  <param name="K_ORBIT" type="double" value="8.0" />
+</node>
+\endverbatim
+

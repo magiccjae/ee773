@@ -1,0 +1,36 @@
+\subsubsection usage Usage
+\verbatim
+<node name="ros_copter" pkg="ros_copter" type="ros_copter">
+  <param name="tau" type="double" value="0.0" />
+  <param name="equilbrium_thrust" type="double" value="0.0" />
+  <param name="u_P" type="double" value="0.0" />
+  <param name="u_I" type="double" value="0.0" />
+  <param name="u_D" type="double" value="0.1" />
+  <param name="v_P" type="double" value="0.0" />
+  <param name="v_I" type="double" value="0.0" />
+  <param name="v_D" type="double" value="0.0" />
+  <param name="w_P" type="double" value="0.0" />
+  <param name="w_I" type="double" value="0.0" />
+  <param name="w_D" type="double" value="0.0" />
+  <param name="x_P" type="double" value="0.0" />
+  <param name="x_I" type="double" value="0.0" />
+  <param name="x_D" type="double" value="0.0" />
+  <param name="y_P" type="double" value="0.0" />
+  <param name="y_I" type="double" value="0.0" />
+  <param name="y_D" type="double" value="0.0" />
+  <param name="z_P" type="double" value="0.0" />
+  <param name="z_I" type="double" value="0.0" />
+  <param name="z_D" type="double" value="0.0" />
+  <param name="psi_P" type="double" value="0.0" />
+  <param name="psi_I" type="double" value="0.0" />
+  <param name="psi_D" type="double" value="0.0" />
+  <param name="max_roll" type="double" value="0.0" />
+  <param name="max_pitch" type="double" value="0.0" />
+  <param name="max_yaw_rate" type="double" value="0.0" />
+  <param name="max_throttle" type="double" value="0.0" />
+  <param name="max_u" type="double" value="0.0" />
+  <param name="max_v" type="double" value="0.0" />
+  <param name="max_w" type="double" value="0.0" />
+</node>
+\endverbatim
+

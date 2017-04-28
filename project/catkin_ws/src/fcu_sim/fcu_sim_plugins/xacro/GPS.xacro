@@ -1,0 +1,114 @@
+<?xml version="1.0"?>
+
+
+<robot xmlns:xacro="http://ros.org/wiki/xacro">
+
+  <!-- Configure GPS -->
+  <xacro:macro
+	name="GPS_BYU"
+	params="namespace parent_link GPS_topic update_rate">
+    <xacro:gps_plugin_macro
+      namespace="${namespace}"
+      parent_link="${parent_link}"
+      gps_topic="${GPS_topic}"
+      mass_gps_sensor="0.001"
+      north_stdev="0.21"
+      east_stdev="0.21"
+      alt_stdev="0.41"
+      north_k_GPS="0.00091"
+      east_k_GPS="0.00091"
+      alt_k_GPS="0.00091"
+      sample_time="${1.0/update_rate}"
+      initial_latitude="40.267320"
+      initial_longitude="-111.635629"
+      initial_altitude="1491.0">
+      <inertia ixx="0.00001" ixy="0.0" ixz="0.0" iyy="0.00001" iyz="0.0" izz="0.00001" />
+      <origin xyz="0 0 0" rpy="0 0 0" />
+    </xacro:gps_plugin_macro>
+  </xacro:macro>
+
+
+  <!-- this GPS sensor needs correct values -->
+  <xacro:macro
+	name="Venus_GPS"
+	params="namespace parent_link GPS_topic update_rate">
+    <xacro:gps_plugin_macro
+      namespace="${namespace}"
+      parent_link="${parent_link}"
+      gps_topic="${GPS_topic}"
+      mass_gps_sensor="0.001"
+      north_stdev="0.021"
+      east_stdev="0.021"
+      alt_stdev="0.041"
+      north_k_GPS="0.00091"
+      east_k_GPS="0.00091"
+      alt_k_GPS="0.00091"
+      sample_time="${1.0/update_rate}"
+      initial_latitude="40.267320"
+      initial_longitude="-111.635629"
+      initial_altitude="1491.0">
+      <inertia ixx="0.00001" ixy="0.0" ixz="0.0" iyy="0.00001" iyz="0.0" izz="0.00001" />
+      <origin xyz="0 0 0" rpy="0 0 0" />
+    </xacro:gps_plugin_macro>
+  </xacro:macro>
+
+
+  <!-- GPS without noise -->
+  <xacro:macro
+	name="perfect_GPS"
+	params="namespace parent_link GPS_topic update_rate">
+    <xacro:gps_plugin_macro
+      namespace="${namespace}"
+      parent_link="${parent_link}"
+      gps_topic="${GPS_topic}"
+      mass_gps_sensor="0.001"
+      north_stdev="0.0"
+      east_stdev="0.0"
+      alt_stdev="0.0"
+      north_k_GPS="0.0"
+      east_k_GPS="0.0"
+      alt_k_GPS="0.0"
+      sample_time="${1.0/update_rate}"
+      initial_latitude="40.267320"
+      initial_longitude="-111.635629"
+      initial_altitude="1491.0">
+      <inertia ixx="0.00001" ixy="0.0" ixz="0.0" iyy="0.00001" iyz="0.0" izz="0.00001" />
+      <origin xyz="0 0 0" rpy="0 0 0" />
+    </xacro:gps_plugin_macro>
+  </xacro:macro>
+
+
+  <!-- Macro to add a GPS module. -->
+  <xacro:macro name="gps_plugin_macro"
+    params="namespace parent_link gps_topic
+      north_stdev east_stdev alt_stdev
+      north_k_GPS east_k_GPS alt_k_GPS
+      initial_latitude initial_longitude initial_altitude
+      sample_time mass_gps_sensor
+      *inertia *origin">
+
+    <!-- Load Plugin -->
+    <gazebo>
+      <plugin filename="libGPS_plugin.so" name="fcu_sim_GPS_plugin">
+      <namespace>${namespace}</namespace>
+      <linkName>${parent_link}</linkName>
+      <GPSTopic>${gps_topic}</GPSTopic>
+      <north_stdev>${north_stdev}</north_stdev>
+      <east_stdev>${east_stdev}</east_stdev>
+      <alt_stdev>${alt_stdev}</alt_stdev>
+      <north_k_GPS>${north_k_GPS}</north_k_GPS>
+      <east_k_GPS>${east_k_GPS}</east_k_GPS>
+      <alt_k_GPS>${alt_k_GPS}</alt_k_GPS>
+      <sampleTime>${sample_time}</sampleTime>
+      <initialLatitude>${initial_latitude}</initialLatitude>
+      <initialLongitude>${initial_longitude}</initialLongitude>
+      <initialAltitude>${initial_altitude}</initialAltitude>
+
+      </plugin>
+    </gazebo>
+  </xacro:macro>
+
+
+
+
+</robot>

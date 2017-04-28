@@ -1,0 +1,2 @@
+set(ros_plane_MESSAGE_FILES "/home/magiccjae/jae_stuff/classes/ee773/project/catkin_ws/src/ros_plane/msg/Controller_Commands.msg;/home/magiccjae/jae_stuff/classes/ee773/project/catkin_ws/src/ros_plane/msg/Current_Path.msg;/home/magiccjae/jae_stuff/classes/ee773/project/catkin_ws/src/ros_plane/msg/Waypoint.msg;/home/magiccjae/jae_stuff/classes/ee773/project/catkin_ws/src/ros_plane/msg/Controller_Internals.msg")
+set(ros_plane_SERVICE_FILES "")

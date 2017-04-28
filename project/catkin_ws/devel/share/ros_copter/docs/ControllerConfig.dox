@@ -1,0 +1,35 @@
+\subsubsection parameters ROS parameters
+
+Reads and maintains the following parameters on the ROS server
+
+- \b "~tau" : \b [double] Dirty Derivative Filter Constant min: 0.0, default: 0.0, max: 1.0
+- \b "~equilbrium_thrust" : \b [double] Equilibrium Thrust (normalized) min: 0.0, default: 0.0, max: 1.0
+- \b "~u_P" : \b [double] Forward Velocity Proportional gain min: 0.0, default: 0.0, max: 5.0
+- \b "~u_I" : \b [double] Forward Velocity Integral gain min: 0.0, default: 0.0, max: 5.0
+- \b "~u_D" : \b [double] Forward Velocity Derivative gain min: 0.0, default: 0.1, max: 5.0
+- \b "~v_P" : \b [double] Right Velocity Proportional gain min: 0.0, default: 0.0, max: 5.0
+- \b "~v_I" : \b [double] Right Velocity Integral gain min: 0.0, default: 0.0, max: 5.0
+- \b "~v_D" : \b [double] Right Velocity Derivative gain min: 0.0, default: 0.0, max: 5.0
+- \b "~w_P" : \b [double] Down Velocity Proportional gain min: 0.0, default: 0.0, max: 5.0
+- \b "~w_I" : \b [double] Down Velocity Integral gain min: 0.0, default: 0.0, max: 5.0
+- \b "~w_D" : \b [double] Down Velocity Derivative gain min: 0.0, default: 0.0, max: 5.0
+- \b "~x_P" : \b [double] North Position Proportional gain min: 0.0, default: 0.0, max: 5.0
+- \b "~x_I" : \b [double] North Position Integral gain min: 0.0, default: 0.0, max: 5.0
+- \b "~x_D" : \b [double] North Position Derivative gain min: 0.0, default: 0.0, max: 5.0
+- \b "~y_P" : \b [double] East Position Proportional gain min: 0.0, default: 0.0, max: 5.0
+- \b "~y_I" : \b [double] East Position Integral gain min: 0.0, default: 0.0, max: 5.0
+- \b "~y_D" : \b [double] East Position Derivative gain min: 0.0, default: 0.0, max: 5.0
+- \b "~z_P" : \b [double] Altitude Proportional gain min: 0.0, default: 0.0, max: 5.0
+- \b "~z_I" : \b [double] Altitude Integral gain min: 0.0, default: 0.0, max: 5.0
+- \b "~z_D" : \b [double] Altitude Derivative gain min: 0.0, default: 0.0, max: 5.0
+- \b "~psi_P" : \b [double] Yaw Angle Proportional gain min: 0.0, default: 0.0, max: 25.0
+- \b "~psi_I" : \b [double] Yaw Angle Integral gain min: 0.0, default: 0.0, max: 25.0
+- \b "~psi_D" : \b [double] Yaw Angle Derivative gain min: 0.0, default: 0.0, max: 25.0
+- \b "~max_roll" : \b [double] Maximum Roll Commanded by Controller (rad) min: 0.0, default: 0.0, max: 1.5619
+- \b "~max_pitch" : \b [double] Maximum Pitch Commanded by Controller (rad) min: 0.0, default: 0.0, max: 1.5619
+- \b "~max_yaw_rate" : \b [double] Maximum Yaw Rate Commanded by Controller (rad/s) min: 0.0, default: 0.0, max: 6.825
+- \b "~max_throttle" : \b [double] Maximum Throttle Commanded by Controller (normalized) min: 0.0, default: 0.0, max: 1.0
+- \b "~max_u" : \b [double] Maximum Forward Velocity Commanded by Controller (m/s) min: 0.0, default: 0.0, max: 45.0
+- \b "~max_v" : \b [double] Maximum Right Velocity Commanded by Controller (m/s) min: 0.0, default: 0.0, max: 45.0
+- \b "~max_w" : \b [double] Maximum Right Velocity Commanded by Controller (m/s) min: 0.0, default: 0.0, max: 45.0
+

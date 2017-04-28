@@ -1,0 +1,12 @@
+[submodule "src/fcu_sim"]
+	path = src/fcu_sim
+	url = https://github.com/byu-magicc/fcu_sim.git
+[submodule "src/fcu_common"]
+	path = src/fcu_common
+	url = https://github.com/byu-magicc/fcu_common.git
+[submodule "src/ros_copter"]
+	path = src/ros_copter
+	url = https://github.com/byu-magicc/ros_copter.git
+[submodule "src/ros_plane"]
+	path = src/ros_plane
+	url = https://github.com/byu-magicc/ros_plane.git
